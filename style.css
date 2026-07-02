@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+/* 1. RESET CƠ BẢN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+}
+
+body {
+    background-color: #090d16; 
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* 2. HERO SECTION */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(rgba(9, 13, 22, 0.85), rgba(9, 13, 22, 1)), 
+                url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem; 
+    font-weight: 800; 
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    color: #94a3b8; 
+}
+
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff7e47 0%, #f97316 100%); 
+    color: white;
+    text-decoration: none;
+    padding: 16px 40px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.cta-btn:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.5);
+}
+
+/* 3. FOMO SECTION (PHẦN ƯU ĐÃI NỔI BẬT) */
+.fomo-section {
+    padding: 100px 20px;
+    text-align: center;
+    border-top: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+
+    
+    background: linear-gradient(180deg, 
+                rgb(22, 32, 55) 0%,   
+                rgb(7, 28, 76) 50%, 
+                rgba(15, 52, 163, 0.811) 100% 
+    );
+    
+    
+    position: relative; 
+    overflow: hidden; 
+}
+
+
+.fomo-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 71, 71, 0.15) 0%, rgba(255, 71, 71, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none; 
+    z-index: 0; 
+}
+
+.fomo-section h2, 
+.countdown-timer, 
+#lead-form {
+    position: relative;
+    z-index: 1;
+}
+.fomo-section h2{
+    font-size: 36px;
+    color: #f97316;
+}
+
+.countdown-timer {
+    font-size: 4.5rem; 
+    font-weight: 800;
+    color: #ff4747; 
+    margin-bottom: 45px;
+    font-variant-numeric: tabular-nums; 
+    
+
+    text-shadow: 0 0 10px rgba(255, 71, 71, 0.5), 
+                 0 0 30px rgba(255, 71, 71, 0.2);
+                 
+    animation: pulseGlow 1.5s infinite alternate; 
+}
+
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 71, 71, 0.5);
+    }
+    100% {
+        transform: scale(1.03); 
+        text-shadow: 0 0 25px rgba(255, 71, 71, 0.8), 0 0 40px rgba(255, 71, 71, 0.4);
+    }
+}
+
+/* FORM ĐĂNG KÝ CAO CẤP */
+#lead-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 18px;
+}
+
+#lead-form input {
+    padding: 16px;
+    border: 2px solid #334155;
+    border-radius: 12px; 
+    background-color: #090d16;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#lead-form input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2); 
+}
+
+.submit-btn {
+    padding: 16px;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(22, 163, 74, 0.2);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+}
