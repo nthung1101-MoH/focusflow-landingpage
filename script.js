@@ -37,5 +37,5 @@ leadForm.addEventListener('submit', function(event) {
 
     alert(`Chúc mừng ${name}! Hệ thống đã ghi nhận email: ${email}. Chúng tôi sẽ chuyển bạn đến Trạm làm việc FocusFlow ngay bây giờ!`);
     
-    window.location.href = 'https://focusflow-app.vercel.app';
+    window.location.href = 'https://github.com/nthung1101-MoH/focusflow-app.git';
 });
